@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 960px;
 }
 
 .grid-row {
