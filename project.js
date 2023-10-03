@@ -10,9 +10,9 @@ function createGrid (amtOfGrids) {
         for (let j = 0; j < amtOfGrids; j++) {
             const gridBox = document.createElement('div')
             gridBox.classList.add('grid-box')
-            gridBox.addEventListener('mouseenter', () => {
+            gridBox.addEventListener('mouseover', () => {
                 gridBox.style.backgroundColor = 'black'
-            })
+            });
             rows.appendChild(gridBox)
         }
         container.appendChild(rows)
