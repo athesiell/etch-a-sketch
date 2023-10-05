@@ -3,6 +3,7 @@ const resetBtn = document.querySelector('.reset')
 const clearBtn = document.querySelector('.clearIt')
 const blackBtn = document.querySelector('.black')
 const rgbBtn = document.querySelector('.rgb')
+// const darkBtn = document.querySelector('.darkening')
 const sizeOfGrid = 8;
 
 function  createRgb () {
@@ -28,17 +29,32 @@ function createGrid (amtOfGrids) {
             });
 
             blackBtn.addEventListener('click', () => {
-            gridBox.addEventListener('mouseenter', () => {
-            gridBox.style.backgroundColor = 'black'
-            })
+                gridBox.addEventListener('mouseenter', () => {
+                    gridBox.style.backgroundColor = 'red'
+                })
             });
+            
             rgbBtn.addEventListener('click', () => {
-            const [r, g, b] = createRgb()
-            gridBox.addEventListener('mouseenter', () => {
-            const bgColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-            gridBox.style.backgroundColor = bgColor
-            })    
-            })
+                const [r, g, b] = createRgb()
+                gridBox.addEventListener('mouseenter', () => {
+                    const bgColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+                    gridBox.style.backgroundColor = bgColor
+                })    
+            });
+
+            // It work but it needs additional changes because it influences other buttons
+
+            // darkBtn.addEventListener('click', () => {
+            //     gridBox.addEventListener('mouseenter', () => {
+            //     const currentOpacity = gridBox.style.opacity
+            //     gridBox.style.background = 'black'
+            //     if (currentOpacity) {
+            //         gridBox.style.opacity = Number(currentOpacity) + .1
+            //     } else {
+            //         gridBox.style.opacity = .1
+            //     }
+            //     })
+            // })
             rows.appendChild(gridBox)
         }
         container.appendChild(rows)
