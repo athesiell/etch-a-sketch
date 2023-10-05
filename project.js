@@ -42,7 +42,7 @@ function createGrid (amtOfGrids) {
                 })    
             });
 
-            // It work but it needs additional changes because it influences other buttons
+            // It works but it needs additional changes because it influences other buttons
 
             // darkBtn.addEventListener('click', () => {
             //     gridBox.addEventListener('mouseenter', () => {
